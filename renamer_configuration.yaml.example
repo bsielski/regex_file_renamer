@@ -1,0 +1,9 @@
+directory: 'S:\sandbox'
+names:
+  - '/Copy/'
+  - '/\.txt/'
+replacements:
+  - from: '/2/'
+    to: 'TWO'	
+  - from: '/3/'
+    to: 'THREE'
