@@ -1,9 +1,24 @@
-directory: 'S:\sandbox'
+# location of files and directiories to rename (it will not open nested directory)
+directory: 'D:\Photos'
+
+# filter entries by name
+# no regex means that all files and directories will be renamed
 names:
-  - '/Copy/'
-  - '/\.txt/'
+  - /\.jpg$/i # files with names end with ".jpg" case insensitive
+
+# replacement patterns
+# most of regular expression trick should work, for example
+#
+#replacements:
+#  - from: /^IMG_/
+#    to: ''
+#  - from: /(\d\d\d\d)(\d\d)(\d\d)/
+#    to: \1-\2-\3
+# 
+# will rename file from "IMG_20170619_135026.jpg" to "2017-06-19_135026.jpg"
+
 replacements:
-  - from: '/2/'
-    to: 'TWO'	
-  - from: '/3/'
-    to: 'THREE'
+  - from: /^IMG_/
+    to: ''
+  - from: /(\d\d\d\d)(\d\d)(\d\d)/
+    to: \1-\2-\3
